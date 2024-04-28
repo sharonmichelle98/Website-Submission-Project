@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Food Website</title>
+
+    <!--My Own CSS-->
+    <link rel="stylesheet" href="css/about-food-website.css">
+
+    <!--My Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!--Font Awesome 5.15.4 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <header class="navbar-container">
+        <div class="jumbotron">
+            <img src="assets/image/about-food-logo.png" alt = "About food Logo"/>
+            <p>Tempatnya ngobrol soal makanan seru</p>
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#terbaru">Terbaru</a></li>
+                <li><a href="#menu-hari-ini">Menu Hari Ini</a></li>
+                <li><a href="#baking">Baking</a></li>
+                <li><a href="#lainnya">Lainnya</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="article-section">
+            <div class="section-title">
+                <h2 id="terbaru">Terbaru</h2>
+            </div>
+
+            <div class="article-and-button-container">
+                <div class="terbaru-article-container">              
+                    <article class="terbaru-article-column animation">
+                        <div class="article-image">
+                            <img src="assets/image/es-kul-kul.jpg" alt="Es Kul Kul">
+                        </div>
+
+                        <div class="article-content">
+                            <h1>Es Kul Kul, Jajanan yang Bikin Nostalgia Masa Kecil Makin Seru</h1>
+
+                            <a href="#" class="link-to-read">Baca Selengkapnya</a>
+                        </div>
+                    </article>
+
+                    <article class="terbaru-article-column animation">
+                        <div class="article-image">
+                            <img src="assets/image/corn-dog.jpg" alt="Corn Dog">
+                        </div>
+
+                        <div class="article-content">
+                            <h1>6 Variasi Corn Dog yang Bikin Ngiler</h1>
+
+                            <a href="#" class="link-to-read">Baca Selengkapnya</a>
+                        </div>
+                    </article>
+
+                    <article class="terbaru-article-column animation">
+                        <div class="article-image">
+                            <img src="assets/image/mille-crepes.jpg" alt="Mille Crepes">
+                        </div>
+
+                        <div class="article-content">
+                            <h1>Lagi Viral, Yuk Kenal Lebih Dekat Dengan Mille Crepes!</h1>
+
+                            <a href="#" class="link-to-read">Baca Selengkapnya</a>
+                        </div>
+                    </article>
+
+                    <article class="terbaru-article-column animation">
+                        <div class="article-image">
+                            <img src="assets/image/gorengan.jpg" alt="Gorengan">
+                        </div>
+
+                        <div class="article-content">
+                            <h1>Selain Gorengan, Makanan Ini Wajib Kamu Hindari Saat Diet Kalori</h1>
+
+                            <a href="#" class="link-to-read">Baca Selengkapnya</a>
+                        </div>
+                    </article>                    
+                </div>
+
+                <div class="dots-container">
+                    <span class="first-dot" onclick="clickFirstSlide(1)"></span>
+                    <span class="first-dot" onclick="clickFirstSlide(2)"></span>
+                    <span class="first-dot" onclick="clickFirstSlide(3)"></span>
+                    <span class="first-dot" onclick="clickFirstSlide(4)"></span>
+                </div>
+                    
+                <div class="view-more-button">
+                    <button>Tampilkan lebih banyak</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <div class="section-title">
+                <h2 id="menu-hari-ini">Menu Hari Ini</h2>
+            </div>
+
+            <div class="article-and-button-container">
+                <div class="menu-article-container">
+                    <article class="menu-article-column animation">
+                        <div class="article-image">
+                            <img src="assets/image/es-timun-melon.jpeg" alt="Es Timun Melon">
+                        </div>
+
+                        <div class="about-writer">
+                            <div class="writer-image">
+                                <img src="assets/image/alya.jpg" alt="Writer Image"/>
+                            </div>
+
+                            <div class="writer-name-and-date">
+                                <p>Alya . 19 Mar 2024</p>
+                            </div>
+                        </div>    
+    
+                        <div class="article-content">
+                            <h4 class="category">MINUMAN</h4>
+                            <h1>Melepas Dahaga Makin Segar dan Nikmat dengan Es Timun Melon</h1>
+                            <p>
+                                Minuman segar menjadi menu yang banyak dicari saat siang hari. Salah satunya
+                                yaitu es timun melon. Segarnya timun, ditambah dengan manisnya sirup melon dan 
+                                dinginnya es batu, siap membantu menghilangkan dahaga setelah beraktivitas seharian!
+                            </p>
+                            <h6>4 MENIT</h6>
+
+                            <a href="#" class="link-to-read">Baca Selengkapnya</a>
+                        </div>
+                    </article>
+
+                    <article class="menu-article-column animation">
+                        <div class="article-image">
+                            <img src="assets/image/rolade-tahu-telur.jpg" alt="Rolade Tahu Telur">
+                        </div>
+
+                        <div class="about-writer">
+                            <div class="writer-image">
+                                <img src="assets/image/vera.jpg" alt="Writer Image"/>
+                            </div>
+
+                            <div class="writer-name-and-date">
+                                <p>Vera . 18 Mar 2024</p>
+                            </div>
+                        </div>
+    
+                        <div class="article-content">
+                            <h4 class="category">SARAPAN</h4>
+                            <h1>Rolade Tahu Telur, Menu Praktis Buat Santapan Saat Sarapan</h1>
+                            <p>
+                                Selain dari daging, rolade juga bisa dibuat dari berbagai bahan. Salah satunya yaitu 
+                                telur. Selain lebih ekonomis, proses pembuatannya juga lebih praktis. Cocok buat jadi
+                                menu andalan saat sarapan!
+                            </p>
+                            <h6>5 MENIT</h6>
+
+                            <a href="#" class="link-to-read">Baca Selengkapnya</a>
+                        </div>
+                    </article>
+
+                    <article class="menu-article-column animation">
+                        <div class="article-image">
+                            <img src="assets/image/ekado-kembang-tahu.jpg" alt="Ekado Kembang Tahu">
+                        </div>
+
+                        <div class="about-writer">
+                            <div class="writer-image">
+                                <img src="assets/image/danny.jpg" alt="Writer Image"/>
+                            </div>
+
+                            <div class="writer-name-and-date">
+                                <p>Danny . 16 Mar 2024</p>
+                            </div>
+                        </div>
+    
+                        <div class="article-content">
+                            <h4 class="category">MENU MASAKAN</h4>
+                            <h1>6 Masakan dari Kembang Tahu Ini Dijamin Ngga Bikin Kamu Bosan!</h1>
+                            <p>
+                                Kembang tahu, atau yang biasa dikenal sebagai tahu kering, terbuat dari hasil sampingan yang 
+                                diperoleh dari perebusan kedelai. Bahan makanan kaya protein ini umumnya diolah untuk campuran
+                                sup. Selain sup, ternyata bahan makanan satu ini bisa diolah menjadi makanan lain. Apa sajakah itu?  
+                            </p>
+                            <h6>5 MENIT</h6>
+
+                            <a href="#" class="link-to-read">Baca Selengkapnya</a>
+                        </div>
+                    </article>
+
+                    <article class="menu-article-column animation">
+                        <div class="article-image">
+                            <img src="assets/image/kerang-saus-tiram.jpg" alt="Kerang saus Tiram">
+                        </div>
+
+                        <div class="about-writer">
+                            <div class="writer-image">
+                                <img src="assets/image/vio.jpg" alt="Writer Image"/>
+                            </div>
+
+                            <div class="writer-name-and-date">
+                                <p>Vio . 17 Mar 2024</p>
+                            </div>
+                        </div>
+    
+                        <div class="article-content">
+                            <h4 class="category">SEAFOOD</h4>
+                            <h1>Resep Masakan dari Kerang, Simpel dan Praktis!</h1>
+                            <p>
+                                Kerang dikenal sebagai salah satu jenis <em>seafood</em> yang menggugah selera. Selain kaya 
+                                protein, kerang juga dikenal kaya akan omega-3 dan vitamin B-12 yang bagus untuk kesehatan
+                                jantung. Terlepas dari kandungan gizinya, ada berbagai cara untuk mengolah kerang menjadi 
+                                masakan yang lezat dan praktis.
+                            </p>
+                            <h6>5 MENIT</h6>
+
+                            <a href="#" class="link-to-read">Baca Selengkapnya</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="dots-container">
+                    <span class="second-dot" onclick="clickSecondSlide(1)"></span>
+                    <span class="second-dot" onclick="clickSecondSlide(2)"></span>
+                    <span class="second-dot" onclick="clickSecondSlide(3)"></span>
+                    <span class="second-dot" onclick="clickSecondSlide(4)"></span>
+                </div>
+
+                <div class="view-more-button">
+                    <button>Tampilkan lebih banyak</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <div class="section-title">
+                <h2 id="baking">Baking</h2>
+            </div>
+
+            <div class="article-and-button-container">
+                <div class="baking-article-container">
+                    <article class="baking-article-column">
+                        <div class="article-image">                       
+                            <img src="assets/image/cake-wortel.jpg" alt="Cake Wortel">
+                        </div>
+                        
+                        <div class="profile-and-content-container">
+                            <div class="subtitle-and-title">
+                                <h4 class="category">CAKE</h4>
+                                <h1>Cake Wortel, Jajanan yang Wajib Dicoba Buat si Kecil</h1>
+                            </div>
+
+                            <div class="about-writer">
+                                <div class="writer-image">
+                                    <img src="assets/image/mina.jpg" alt="Writer Image"/>
+                                </div>
+
+                                <div class="writer-name-and-date">
+                                    <p>Mina . 20 Mar 2024</p>
+                                </div>
+                            </div>              
+                
+                            <div class="article-content">                      
+                                <h6>5 MENIT</h6>
+
+                                <a href="#" class="link-to-read">Baca Selengkapnya</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="baking-article-column">
+                        <div class="article-image">
+                            <img src="assets/image/nastar.jpg" alt="Nastar">
+                        </div>
+                           
+                        <div class="profile-and-content-container">
+                            <div class="subtitle-and-title">
+                                <h4 class="category">CAKE</h4>
+                                <h1>Sejarah di Balik Kelembutan Nastar</h1>
+                            </div>
+
+                            <div class="about-writer">
+                                <div class="writer-image">
+                                    <img src="assets/image/septa.jpg" alt="Writer Image"/>
+                                </div>
+
+                                <div class="writer-name-and-date">
+                                    <p>Septa . 19 Mar 2024</p>
+                                </div>
+                            </div>    
+                
+                            <div class="article-content">                            
+                                <h6>8 MENIT</h6>
+
+                                <a href="#" class="link-to-read">Baca Selengkapnya</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="baking-article-column">
+                        <div class="article-image">
+                            <img src="assets/image/pastry.jpg" alt="Pastry">
+                        </div>
+
+                        <div class="profile-and-content-container">
+                            <div class="subtitle-and-title">
+                                <h4 class="category">CAMILAN</h4>
+                                <h1>Selain Cromboloni, Berikut Ini Adalah Jenis Pastry yang Wajib Kamu Tahu</h1>
+                            </div>
+
+                            <div class="about-writer">
+                                <div class="writer-image">
+                                    <img src="assets/image/dion.jpg" alt="Writer Image"/>
+                                </div>
+
+                                <div class="writer-name-and-date">
+                                    <p>Dion . 18 Mar 2024</p>
+                                </div>
+                            </div>
+                
+                            <div class="article-content">
+                                <h6>6 MENIT</h6>
+
+                                <a href="#" class="link-to-read">Baca Selengkapnya</a>
+                            </div>
+                        </div>                    
+                    </article>
+
+                    <article class="baking-article-column">
+                        <div class="article-image">
+                            <img src="assets/image/cake-bayam-keju.jpg" alt="Cake Bayam Keju">
+                        </div>
+
+                        <div class="profile-and-content-container">
+                            <div class="subtitle-and-title">
+                                <h4 class="category">CAKE</h4>
+                                <h1>5 Resep dari Bayam Untuk Menemani Malam Minggumu</h1>
+                            </div>
+
+                            <div class="about-writer">
+                                <div class="writer-image">
+                                    <img src="assets/image/lufya.jpg" alt="Writer Image"/>
+                                </div>
+
+                                <div class="writer-name-and-date">
+                                    <p>Lufya . 18 Mar 2024</p>
+                                </div>
+                            </div>
+
+                            <div class="article-content" >
+                                <h6>4 MENIT</h6>
+
+                                <a href="#" class="link-to-read">Baca Selengkapnya</a>
+                            </div>
+                        </div>                    
+                    </article>  
+                </div>
+
+                <div class="view-more-button">
+                    <button>Tampilkan lebih banyak</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <div class="section-title">
+                <h2 id="lainnya">Lainnya</h2>
+            </div>
+
+            <div class="article-and-button-container">
+                <div class="lainnya-article-container">
+                    <article class="lainnya-article-column" id="article-1">
+                        <div class="article-content" >
+                            <h4 class="category">TIPS</h4>
+                            <h1>Tips Memotong Daging untuk Hasil yang Tidak Alot dan Keras</h1>
+                            <h6>5 MENIT</h6>
+
+                            <a href="#" class="link-to-read">Baca Selengkapnya</a>
+                        </div>                    
+                    </article>
+
+                    <article class="lainnya-article-column" id="article-2">
+                        <div class="article-content" >
+                            <h4 class="category">BUAH</h4>
+                            <h1>Lagi Viral dan Langka Ditemui, Buah Ini Ternyata Kaya Manfaat, Lho!</h1>
+                            <h6>4 MENIT</h6>
+
+                            <a href="#" class="link-to-read">Baca Selengkapnya</a>
+                        </div>                    
+                    </article>
+
+                    <article class="lainnya-article-column" id="article-3">
+                        <div class="article-content" >
+                            <h4 class="category">MEAL PREP</h4>
+                            <h1>5 Cara Supaya Bahan Masakan Awet Sampai Seminggu, Apa Sajakah Itu?</h1>
+                            <h6>5 MENIT</h6>
+
+                            <a href="#" class="link-to-read">Baca Selengkapnya</a>
+                        </div>                    
+                    </article>
+                </div>
+
+                <div class="view-more-button">
+                    <button>Tampilkan lebih banyak</button>
+                </div>
+            </div>
+        </div>
+
+        <aside class="my-profile">
+            <h5>Meet with the website creator</h5>
+            <img src="#" alt="My Photo">
+
+            <h3>Sharon Mickelie C. C.</h3>
+            <p>Love all about arts, foods, and web designs</p>
+        </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="subscribe-container">
+            <div class="footer-section">
+                <h2>Subscribe Artikel Kami</h2>
+            </div>
+
+            <div class="email-form">
+                <input type="email" id="email" placeholder="e.g. example@gmail.com" required/>
+                <button class="submit-button">Submit</button>
+            </div>
+        </div>
+
+        <div class="social-media-container">
+            <div class="footer-section">
+                <h2>Kunjungi Kami di</h2>
+            </div>
+
+            <div class="social-media-list">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="website-copyright">
+            <p>&#169 2024, About Food Website</p>
+        </div>
+    </footer>
+
+    <!--Website Functionality-->
+    <script src="js/about-food-website.js" type="text/javascript"></script>
+</body>
+</html>
