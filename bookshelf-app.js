@@ -235,12 +235,15 @@ cancelButton.addEventListener('click', function () {
 });
 
 deleteConfirmButton.addEventListener('click', function (uniqueId) {
-    removeBook(uniqueId);
+    for (const uniqueBook of books) {
+        if (uniqueBook.id = uniqueId) {
+            removeBook(uniqueId);
+        }
+    }
     deleteModal.classList.add('hidden');
     deleteModalBackground.classList.add('hidden');
     hasDeletedModal.classList.remove('hidden');
     hasDeletedBackground.classList.remove('hidden');
-    
 });
 
 document.addEventListener('DOMContentLoaded', function () {
