@@ -26,6 +26,9 @@ const closeHasDeletedModal = document.getElementById('close-has-deleted-modal');
 const cancelButton = document.getElementById('cancel-button');
 const deleteConfirmButton = document.getElementById('delete-confirm-button');
 
+const searchBookForm = document.getElementById('search-book-title');
+const searchBookInput = document.getElementById('search-book-input');
+
 function generateId () {
     return +new Date();
 }
@@ -145,10 +148,22 @@ function makeBook(bookObject) {
 
         const deleteButton = document.createElement('button');
         deleteButton.innerText = 'Delete Book';
+        uniqueId = id;
         deleteButton.classList.add('delete');
         deleteButton.addEventListener('click', function () {
             deleteModal.classList.remove('hidden');
-            deleteModalBackground.classList.remove('hidden');            
+            deleteModalBackground.classList.remove('hidden');
+            deleteConfirmButton.addEventListener('click', function () {
+                for (const uniqueBook of books) {
+                    if (uniqueBook.id == id) {
+                        removeBook(id);
+                    }
+                }
+                deleteModal.classList.add('hidden');
+                deleteModalBackground.classList.add('hidden');
+                hasDeletedModal.classList.remove('hidden');
+                hasDeletedBackground.classList.remove('hidden');
+            });          
         });
 
         actionContainer.append(stillReadingButton, deleteButton);
@@ -165,10 +180,22 @@ function makeBook(bookObject) {
 
         const deleteButton = document.createElement('button');
         deleteButton.innerText = 'Delete Book';
+        uniqueId = id;
         deleteButton.classList.add('delete');
         deleteButton.addEventListener('click', function () {
             deleteModal.classList.remove('hidden');
             deleteModalBackground.classList.remove('hidden');
+            deleteConfirmButton.addEventListener('click', function () {
+                for (const uniqueBook of books) {
+                    if (uniqueBook.id == id) {
+                        removeBook(id);
+                    }
+                }
+                deleteModal.classList.add('hidden');
+                deleteModalBackground.classList.add('hidden');
+                hasDeletedModal.classList.remove('hidden');
+                hasDeletedBackground.classList.remove('hidden');
+            });
         });
 
         actionContainer.append(hasFinishedButton, deleteButton);
@@ -204,7 +231,29 @@ function removeBook(bookId) {
     saveData();
 }
 
+//Function to search books
+searchBookForm.addEventListener('submit', function (searchEvent) {
+    searchEvent.preventDefault();
+    const bookTitleList = document.querySelectorAll('.book-item > .inner h3');
+    for (const bookSingleTitle of bookTitleList) {
+        if (bookSingleTitle.innerText.toLowerCase().includes(searchBookInput)) {
+            bookSingleTitle.parentElement.parentElement.style.display = 'block';
+        } else if(searchBookInput !== bookSingleTitle.innerText.toLowerCase()) {
+            bookSingleTitle.parentElement.parentElement.style.display = 'none';
+        } else {
+            bookSingleTitle.parentElement.parentElement.style.display = 'block';
+        }
+    }
+});
+
+
+// Function to close the modals
 closePutStillReadingModal.addEventListener('click', function () {
+    putStillReadingModal.classList.add('hidden');
+    putStillReadingBackground.classList.add('hidden');
+});
+
+putStillReadingBackground.addEventListener('click', function () {
     putStillReadingModal.classList.add('hidden');
     putStillReadingBackground.classList.add('hidden');
 });
@@ -214,7 +263,17 @@ closeputHasFinishedModal.addEventListener('click', function () {
     putHasFinishedBackground.classList.add('hidden');
 });
 
+putHasFinishedBackground.addEventListener('click', function () {
+    putHasFinishedModal.classList.add('hidden');
+    putHasFinishedBackground.classList.add('hidden');
+});
+
 closeStillReadingModal.addEventListener('click', function () {
+    stillReadingModal.classList.add('hidden');
+    stillReadingBackground.classList.add('hidden');
+});
+
+stillReadingBackground.addEventListener('click', function() {
     stillReadingModal.classList.add('hidden');
     stillReadingBackground.classList.add('hidden');
 });
@@ -224,7 +283,17 @@ closeHasFinishedModal.addEventListener('click', function () {
     hasFinishedBackground.classList.add('hidden');
 });
 
+hasFinishedBackground.addEventListener('click', function () {
+    hasFinishedModal.classList.add('hidden');
+    hasFinishedBackground.classList.add('hidden');
+});
+
 closeHasDeletedModal.addEventListener('click', function () {
+    hasDeletedModal.classList.add('hidden');
+    hasDeletedBackground.classList.add('hidden');
+});
+
+hasDeletedBackground.addEventListener('click', function () {
     hasDeletedModal.classList.add('hidden');
     hasDeletedBackground.classList.add('hidden');
 });
@@ -234,16 +303,9 @@ cancelButton.addEventListener('click', function () {
     deleteModalBackground.classList.add('hidden');
 });
 
-deleteConfirmButton.addEventListener('click', function (uniqueId) {
-    for (const uniqueBook of books) {
-        if (uniqueBook.id = uniqueId) {
-            removeBook(uniqueId);
-        }
-    }
+deleteModalBackground.addEventListener('click', function () {
     deleteModal.classList.add('hidden');
     deleteModalBackground.classList.add('hidden');
-    hasDeletedModal.classList.remove('hidden');
-    hasDeletedBackground.classList.remove('hidden');
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -277,6 +339,5 @@ document.addEventListener(BOOK_EVENT, function () {
         }
     }
 });
-
 
 
